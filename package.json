@@ -1,0 +1,14 @@
+{
+    "name": "graph-it",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app"
+    },
+    "dependencies": {
+        "express": "3.0.3",
+        "jade": "1.1.*",
+        "stylus": "0.42.*",
+        "plot.js": ""
+    }
+}
