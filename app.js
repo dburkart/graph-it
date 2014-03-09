@@ -1,4 +1,5 @@
 var express = require('express')
+  , plot = require('plot.js')
   , path = require('path')
   , http = require('http');
 
@@ -27,6 +28,15 @@ app.configure('development', function(){
 app.get('/', function(req, res) {
 	res.render('index', {
 		title: 'Graph-It'
+	});
+});
+
+app.post('/plot', function(req, res) {
+	var graph = new plot();
+	var result = graph.render(req.body.input);
+
+	res.render('plot', {
+		graph: result
 	});
 });
 
