@@ -6,7 +6,6 @@ $(document).ready(function() {
 			data: {
 				input: $('#formula-editor').val()
 			},
-			dataType: 'text'
 		});
 
 		request.done(function(msg) {
